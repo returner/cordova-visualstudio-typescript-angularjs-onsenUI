@@ -1,19 +1,39 @@
 ﻿<!DOCTYPE html>
-<html>
+<html xmlns:ng="http://angularjs.org" id="ng-app" ng-app="CordovaOnsen">
 <head>
-    <meta charset="utf-8" />
-    <title>PhonegapAngularjsWithOnsenUI</title>
+    <title>CashView Mobile</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-    <!-- PhonegapAngularjsWithOnsenUI references -->
-    <link href="css/index.css" rel="stylesheet" />
+    <link href="scripts/onsen/css/onsenui.css" rel="stylesheet" />
+    <link href="scripts/onsen/css/onsen-css-components.css" rel="stylesheet" />
+    <link href="Content/CordovaOnsen.css" rel="stylesheet" />
+    <link href="Content/toastr.min.css" rel="stylesheet" />
+    <link href="css/login.css" rel="stylesheet" />
+
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <script src="scripts/jquery-2.1.1.js"></script>
+    <script src="scripts/angular.js"></script>
+    <script src="scripts/angular-resource.js"></script>
+    <script src="scripts/onsen/js/onsenui.js"></script>
+    <!--interfaces-->
+    <script src="App/Interfaces/ICordovaOnsenController.js"></script>
+    <script src="App/Interfaces/ICordovaOnsenScope.js"></script>
+    <script src="App/Interfaces/ICordovaOnsenController.js"></script>
+    <!--utils-->
+    <script src="App/Utils/LogManager.js"></script>
+    <script src="App/Utils/AuthManager.js"></script>
+    <script src="App/Utils/HostManager.js"></script>
+    <script src="App/Utils/HttpTransfer.js"></script>
+    <script src="App/Utils/webHttpTransfer.js"></script>
+    <!--controllers-->
+    <!--startup-->
+    <script src="App/View/CordovaOnsenViewModel.js"></script>
+
 </head>
 <body>
-    <p>Hello, your application is ready!</p>
-
-    <!-- Cordova reference, this is added to your app when it's built. -->
-    <script src="cordova.js"></script>
-    <script src="scripts/platformOverrides.js"></script>
-
-    <script src="scripts/index.js"></script>
+    <ons-sliding-menu menu-page="Views/Menus.html" main-page="Views/Pages/BulletinBoard.html" side="left" var="route" type="reveal" max-slide-distance="260px" swipable="true">
+    </ons-sliding-menu>
 </body>
 </html>
+
+

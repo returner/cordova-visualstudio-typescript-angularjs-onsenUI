@@ -1,0 +1,17 @@
+﻿<ons-page modifier="menu-page">
+    <ons-toolbar modifier="transparent"></ons-toolbar>
+    <ons-list class="menu-list">
+        <ons-list-item class="menu-item" ng-click="route.setMainPage('Views/Pages/BulletinBoard.html', {closeMenu: true})">
+            <ons-icon icon="fa fa-bar-chart"></ons-icon>BulletinBoard
+        </ons-list-item>
+        <ons-list-item class="menu-item" ng-click="route.setMainPage('Views/Pages/Orders.html', {closeMenu: true})">
+            <ons-icon icon="fa fa-shopping-cart"></ons-icon>Orders
+        </ons-list-item>
+        <ons-list-item class="bottom-menu-item" ng-click="route.setMainPage('Views/Pages/Configuration.html', {closeMenu: true})">
+            <ons-icon icon="fa fa-cog"></ons-icon>Configuration
+            <!--<div class="notification menu-notification">3</div>-->
+        </ons-list-item>
+    </ons-list>
+    <br>
+    
+</ons-page>

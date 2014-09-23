@@ -1,0 +1,19 @@
+﻿<ons-page ng-controller="RegisterCtrl">
+    <ons-toolbar>
+        <div class="left">
+            <ons-toolbar-button ng-click="route.toggle()">
+                <ons-icon icon="ion-navicon" size="28px" fixed-width="false"></ons-icon>
+            </ons-toolbar-button>
+        </div>
+        <div class="center">{{vm.menuTitle}}</div>
+    </ons-toolbar>
+    <div class="login-form">
+        <input type="email" class="text-input--underbar" ng-model="vm.registerInfo.UserName" placeholder="이메일" value="">
+        <input type="password" class="text-input--underbar" ng-model="vm.registerInfo.Password" placeholder="비밀번호" value="">
+        <input type="password" class="text-input--underbar" ng-model="vm.registerInfo.ConfirmPassword" placeholder="비밀번호 확인" value="">
+        <br><br>
+        <ons-button modifier="large" class="login-button" ng-click="vm.register()">회원가입</ons-button>
+        <br><br>
+        <ons-button modifier="quiet" class="forgot-password" ng-click="route.setMainPage('Views/Pages/Login.html', {closeMenu: true})">이미 가입하셨나요?</ons-button>
+    </div>
+</ons-page>
